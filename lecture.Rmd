@@ -1,6 +1,6 @@
 ---
 title: "Introduction to Statistical Analysis"
-author: "Mark Dunning. Original materials by CRUK Bioinformatics Core; tiny.cc/crukStats"
+author: "Mark Dunning. Original materials by CRUK Cambridge Institute Bioinformatics Core; tiny.cc/crukStats"
 date: '`r format(Sys.time(), "Last modified: %d %b %Y")`'
 output: 
   slidy_presentation:
@@ -21,7 +21,7 @@ knitr::opts_chunk$set(comment = NA,echo=FALSE,message=FALSE,warning = FALSE,fig.
 
 - What is statistics? Why do we need it?
 - Understanding data types
-- Worked examples of statistical tests
+- Worked examples and exercises of various forms of "t-test"
     + using online tools
 
 ## The point of statistics
@@ -207,7 +207,7 @@ ggplot(df, aes(x)) + geom_histogram(fill="steelblue",col="gray")
     $s.d = \sqrt{\frac{1}{N-1} \sum_{i=1}^N (x_i - \overline{x})^2}=153.79$
     
 - Median and Interquartile range
-    + 11, **243**, 270, ***310***, 311, **345**, 5300    
+    + 11, **243**, 270, ***310***, 311, **345**, 530
     
 ## Continuous Data - Descriptive Statistics (Example)
 
@@ -240,7 +240,7 @@ ggplot(data.frame(Grade=c("","I","II","IV"), Frequency=c(25,2,15,30)),aes(x=Grad
     + Example: the difference in gene expression before and after treatment = 0
 - Calculate a test statistic from the data under the null hypothesis
 - Compare the test statistic to the theoretical values
-    + is it more extreme than expected
+    + is it more extreme than expected?
     + the "***p-value***"
 - Either reject or do not reject the null hypothesis
     + "***Absence of evidence is not evidence of absence***" (Bland and Altman, 1995)
@@ -430,7 +430,6 @@ P = 0.01
 - Alternative hypothesis, $H_1$
     + mean weight of breed B $\ne$ mean weight of breed B
 - Tails: two-tailed 
-    + the tails on the distribution - not on the mice!!!
 - Either ***reject*** or ***do not reject*** the null hypothesis - ***never accept the alternative hypothesis***
 
 ## Independent two-sample t-test: the data
@@ -486,7 +485,7 @@ P-value: `r round(test$p.value,2)`
 
 ## Independent two-sample t-test: result
 
-- The difference in mean weight between the two breeds is -1.30 (95% CI: -3.48, 0.89) 
+- The difference in mean weight between the two breeds is -1.30 
     + [NB as this is negative, breed B mice tend to be bigger than breed A].
 - There is no evidence of a difference in weights between breed A and breed B. 
 - t=`r tsat`, df= `r degfree` (Welch’s correction), p=`r pval`
@@ -499,8 +498,9 @@ P-value: `r round(test$p.value,2)`
 ## Paired two-sample t-test: Does the mean difference = 0?
 
 - e.g. Research question: 20 patients with ovarian cancer were studied using MRI imaging. Cellularity was measured for each patient at two sites of disease. 
-
 - Does the cellularity differ between two different sites of disease? 
+    + cellularity is amount of tumour (versus normal cells)
+    + high cellularity means lots of tumour
     
 ## Paired two-sample t-test: Does the mean difference = 0?
 
@@ -565,10 +565,18 @@ P-value: `r pval`
 
 - Complete Exercises 3 and 4
 
-## What if normality is not reasonable?
+## Extensions
 
-- Transform your data, e.g. log transformation
-- Non-parametric tests....
+- What if normality is not reasonable?
+    + Transform your data, e.g. log transformation
+    + Non-parametric tests....
+- What if you have more than two groups?
+    + Approaches such as ANOVA
+- What if you want to look at the relationship between two continuous variables
+    + Linear regression
+    
+    
+
 
 ## Summary - continuous variables
 
