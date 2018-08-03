@@ -120,7 +120,7 @@ $(document).ready(function () {
 
 <h1 class="title toc-ignore">Introduction to Statistical Analysis</h1>
 <h4 class="author"><em>Mark Dunning, Dominique-Laurent Couturier and Sarah Vowler</em></h4>
-<h4 class="date"><em>Last modified: 07 Feb 2018</em></h4>
+<h4 class="date"><em>Last modified: 03 Aug 2018</em></h4>
 
 </div>
 
@@ -222,6 +222,177 @@ document.addEventListener("DOMContentLoaded", function() {
 <hr />
 <p><strong>Question:</strong> Is the finding likely to hold Biological significance? Would you be willing to put further resources into validating the finding?</p>
 <hr />
+</div>
+</div>
+<div id="non-parametric-tests" class="section level1">
+<h1>Non-Parametric Tests</h1>
+<div id="vitamin-d-levels" class="section level3">
+<h3>5. Vitamin D levels</h3>
+<p>The file <strong><code>vitd.csv</code></strong> contains data on vitamin D levels for subjects with (“Y”), and without (“N”) fibrosis. To import these data, you will need to select the <strong><em>1st column in a factor</em></strong> option.</p>
+<hr />
+<p><strong>Question:</strong> State the null and alternative hypothesises</p>
+<hr />
+<hr />
+<p><strong>Question:</strong> Examine the distribution of the data. Why doesn’t a parametric analysis seem appropriate?</p>
+<hr />
+<p>By un-ticking the <strong><em>Use Parametric Test?</em></strong> option in the <strong><em>Statistical Analysis</em></strong> tab you will see the results of a Mann-Whitney U (/ Wilxcoxon rank-sum test) test.</p>
+<hr />
+<p><strong>Question:</strong> How do you interpret the value of the test?</p>
+<hr />
+</div>
+<div id="birth-weight-of-twins" class="section level3">
+<h3>6. Birth-weight of twins</h3>
+<p>Dr D. R. Peterson of the Department of Epidemiology, University of Washington, collected the data found in file <strong><code>twins.csv</code></strong>. It consists of the birth-weights of each of 20 dizygous twins. One twin suffered Sudden Infant Death Syndrom (SIDS), and the other twin did not. The hypothesis to be tested is that the SIDS child of each pair had a lower birth-weight.</p>
+<hr />
+<p><strong>Question:</strong> State the null and alternative hypothesises</p>
+<hr />
+<p>Decide on the level of significance to be used and whether the test should be one-sided or two-sided.</p>
+<hr />
+<p><strong>Question:</strong> Would be appropriate to treat these as paired or independant samples?</p>
+<hr />
+<p>Recall from the lectures that for paired data we have to consider whether the differences are symmetrical about zero. Carry out both the sign-test and Wilcoxon signed rank tests on the data.</p>
+<hr />
+<p><strong>Question:</strong> Do both tests draw the same conclusion about the data? Which test is the most appropriate?</p>
+<hr />
+</div>
+</div>
+<div id="tests-for-categorical-variables" class="section level1">
+<h1>Tests for categorical variables</h1>
+<div id="nucleotide-frequency" class="section level3">
+<h3>7. Nucleotide frequency</h3>
+<p>In the following table we have the frequencies of the four nucleotides in two sequences. We are interested in comparing the nucleotide proportions of the two sequences.</p>
+<div style="width:50%; margin:auto">
+<table>
+<thead>
+<tr class="header">
+<th> </th>
+<th align="center">A</th>
+<th align="center">C</th>
+<th align="center">G</th>
+<th align="center">T</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Sequence 1</td>
+<td align="center">273</td>
+<td align="center">233</td>
+<td align="center">236</td>
+<td align="center">258</td>
+</tr>
+<tr class="even">
+<td>Sequence 2</td>
+<td align="center">281</td>
+<td align="center">246</td>
+<td align="center">244</td>
+<td align="center">229</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr />
+<p><strong>Question:</strong> What are your null and alternative hypotheses?</p>
+<hr />
+<p>We can analyse these data online in the Shiny app by entering the counts into the table on the left hand side. Note that the table needs to be resized to increase the number of columns.</p>
+<p><a href="http://bioinformatics.cruk.cam.ac.uk/stats/contingency-table" class="uri">http://bioinformatics.cruk.cam.ac.uk/stats/contingency-table</a></p>
+<hr />
+<p><strong>Question:</strong> What is your value of your Chi-squared statistic and its corresponding p-value? How do you interpret the result?</p>
+<hr />
+</div>
+<div id="disease-association" class="section level3">
+<h3>8. Disease association</h3>
+<p>The following table gives the frequencies of wild-type and knock-out mice developing a disease thought to be associated to the absence of the knock-out gene.</p>
+<div style="width:50%; margin:auto">
+<table>
+<thead>
+<tr class="header">
+<th> </th>
+<th align="right">WT</th>
+<th align="right">KO</th>
+<th align="right">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Disease</td>
+<td align="right">1</td>
+<td align="right">7</td>
+<td align="right">8</td>
+</tr>
+<tr class="even">
+<td>No disease</td>
+<td align="right">9</td>
+<td align="right">3</td>
+<td align="right">12</td>
+</tr>
+<tr class="odd">
+<td>Total</td>
+<td align="right">10</td>
+<td align="right">10</td>
+<td align="right">20</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr />
+<p><strong>Question:</strong> What are your null and alternative hypotheses?</p>
+<hr />
+<hr />
+<p><strong>Question:</strong> What are your expected frequencies?</p>
+<hr />
+<p>Enter the data into the <a href="http://bioinformatics.cruk.cam.ac.uk/stats/contingency-table/">Shiny app</a> as before. Select the <strong>Fisher’s exact test</strong> option to compare the proportion of mice in each group that developed the disease.</p>
+<hr />
+<p><strong>Question:</strong> What is your p-value? How do you interpret the result?</p>
+<hr />
+</div>
+</div>
+<div id="small-group-exercise-choosing-a-test" class="section level1">
+<h1>Small-Group Exercise: Choosing a test</h1>
+<p>In this section, we invite you to form small groups to select a dataset and discuss what methods/tests you would use to analyse those data.</p>
+<p>You can use this interactive document to record your observations:</p>
+<p><a href="https://public.etherpad-mozilla.org/p/2018-02-12-intro-to-stats" class="uri">https://public.etherpad-mozilla.org/p/2018-02-12-intro-to-stats</a></p>
+<div id="dataset-1-plant-growth-data1.csv" class="section level3">
+<h3>Dataset 1: Plant Growth <code>data1.csv</code></h3>
+<p>Darwin (1876) studied the growth of <em>pairs</em> of zea may (aka corn) seedlings, one produced by cross-fertilization and the other produced by self-fertilization, but otherwise grown under identical conditions. His goal was to demonstrate the greater vigour of the cross-fertilized plants. The data recorded are the final height (inches, to the nearest 1/8th) of the plants in each pair.</p>
+<p><em>Is there evidence to support the hypothesis of greater growth in Cross-fertilized plants?</em></p>
+</div>
+<div id="dataset-2-florence-nightingale-data2.csv" class="section level3">
+<h3>Dataset 2: Florence Nightingale <code>data2.csv</code></h3>
+<p>In the history of data visualization, Florence Nightingale is best remembered for her role as a social activist and her view that statistical data, presented in charts and diagrams, could be used as powerful arguments for medical reform.</p>
+<p>After witnessing deplorable sanitary conditions in the Crimea, she wrote several influential texts (Nightingale, 1858, 1859), including polar-area graphs (sometimes called “Coxcombs” or rose diagrams), showing the number of deaths in the Crimean from battle compared to disease or preventable causes that could be reduced by better battlefield nursing care.</p>
+<p>Her Diagram of the Causes of Mortality in the Army in the East showed that most of the British soldiers who died during the Crimean War died of sickness rather than of wounds or other causes. It also showed that the death rate was higher in the first year of the war, before a Sanitary Commissioners arrived in March 1855 to improve hygiene in the camps and hospitals.</p>
+<p><em>Do the data support the claim that deaths due to avoidable causes decreased after a change in regime?</em></p>
+</div>
+<div id="dataset-3-effect-of-bran-on-diet-data3.csv" class="section level3">
+<h3>Dataset 3: Effect of bran on diet: <code>data3.csv</code></h3>
+<p>The addition of bran to the diet has been reported to benefit patients with diverticulosis. Several different bran preparations are available, and a clinician wants to test the efficacy of two of them on patients, since favourable claims have been made for each. Among the consequences of administering bran that requires testing is the transit time through the alimentary canal. By random allocation the clinician selects two groups of patients aged 40-64 with diverticulosis of comparable severity. Sample 1 contains 15 patients who are given treatment A, and sample 2 contains 12 patients who are given treatment B.</p>
+<p><em>Does transit time differ in the two groups of patients taking these two preparations?</em></p>
+</div>
+<div id="dataset-4-effect-of-autism-drug-data4.csv" class="section level3">
+<h3>Dataset 4: Effect of Autism drug <code>data4.csv</code></h3>
+<p>Consider a clinical investigation to assess the effectiveness of a new drug designed to reduce repetitive behaviors in children affected with autism. If the drug is effective, children will exhibit fewer repetitive behaviors on treatment as compared to when they are untreated. A total of 8 children with autism enroll in the study. Each child is observed by the study psychologist for a period of 3 hours both before treatment and then again after taking the new drug for 1 week. The time that each child is engaged in repetitive behavior during each 3 hour observation period is measured. Repetitive behavior is scored on a scale of 0 to 100 and scores represent the percent of the observation time in which the child is engaged in repetitive behavior. For example, a score of 0 indicates that during the entire observation period the child did not engage in repetitive behavior while a score of 100 indicates that the child was constantly engaged in repetitive behavior.</p>
+<p><em>Is there statistically significant improvement in repetitive behavior after 1 week of treatment?</em></p>
+</div>
+<div id="dataset-5-cd4-data5.csv" class="section level3">
+<h3>Dataset 5: CD4 <code>data5.csv</code></h3>
+<p>CD4 cells are carried in the blood as part of the human immune system. One of the effects of the HIV virus is that these cells die. The count of CD4 cells is used in determining the onset of full-blown AIDS in a patient. In this study of the effectiveness of a new anti-viral drug on HIV, 20 HIV-positive patients had their CD4 counts recorded and then were put on a course of treatment with this drug. After using the drug for one year, their CD4 counts were again recorded.</p>
+<p><em>Do patients taking the drug have increased CD4 counts?</em></p>
+</div>
+<div id="dataset-6-drink-driving-data6.csv" class="section level3">
+<h3>Dataset 6: Drink Driving <code>data6.csv</code></h3>
+<p>Drunk driving is one of the main causes of car accidents. Interviews with drunk drivers who were involved in accidents and survived revealed that one of the main problems is that drivers do not realize that they are impaired, thinking “I only had 1-2 drinks … I am OK to drive.”</p>
+<p>A sample of 100 drivers was chosen, and their reaction times in an obstacle course were measured <em>before</em> and <em>after</em> drinking two beers. The purpose of this study was to check whether drivers are impaired after drinking two beers</p>
+<p><em>Does drinking beer alter the reaction time of the driver?</em></p>
+</div>
+<div id="dataset-7-pollution-in-trees-data7.csv" class="section level3">
+<h3>Dataset 7: Pollution in Trees <code>data7.csv</code></h3>
+<p>Laureysens et al. (2004) measured metal content in the wood of 13 poplar clones growing in a polluted area, once in August and once in November. Concentrations of aluminum (in micrograms of Al per gram of wood) are shown below.</p>
+<p><em>Is there any evidence for an increase in pollution between November and August?</em></p>
+</div>
+<div id="dataset-8-salaries-for-professors-data8.csv" class="section level3">
+<h3>Dataset 8: Salaries for Professors <code>data8.csv</code></h3>
+<p>The 2008-09 nine-month academic salary for Assistant Professors, Associate Professors and Professors in a college in the U.S. The data were collected as part of the on-going effort of the college’s administration to monitor salary differences between male and female faculty members. (salary given as nine-month salary, in dollars.)</p>
+<p><em>Is there evidence that Female professors are paid differently to their Male counterparts?</em></p>
 </div>
 </div>
 
