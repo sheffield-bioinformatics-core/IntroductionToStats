@@ -39,8 +39,11 @@ After this course you should be able to:-
 
 ### Course Materials
 
-- [Lecture (pdf)](IntroToStat-DLC-20171022.pdf)
-- [Online quiz](https://docs.google.com/forms/d/e/1FAIpQLScblQ_-ISfSCGp_EIVPPI_mnrJHttaKxln8vVoyjJFvS8BL1w/viewform)
+- [Lecture 1 (Introduction)](http://sbc.shef.ac.uk/IntroductionToStats/lectures/1_intro#1)
+- [Lecture 2 (t tests)](http://sbc.shef.ac.uk/IntroductionToStats/lectures/2_t_tests#1)
+- [Lecture 3 (non parametric tests)](http://sbc.shef.ac.uk/IntroductionToStats/lectures/3_non_parametric)
+- [Lecture 4 (contingency tables)](http://sbc.shef.ac.uk/IntroductionToStats/lectures/4_categorical#1)
+- [Online quiz](https://docs.google.com/forms/d/e/1FAIpQLSdjJsxP9u5U0SGXAkTuQSsFecMrtfvf0m0GgWMKDq5bfLEYTA/viewform)
 - [Practical](practical.html)
 - [Interactive document to record your answers for the group exercise](https://public.etherpad-mozilla.org/p/2017-10-23-intro-to-stats)
 - [Example data for the course](CourseData.zip)
@@ -49,10 +52,9 @@ After this course you should be able to:-
 
 You will need an internet connection in order to run the practicals and examples
 
-- [Central limit theorem app](http://bioinformatics.cruk.cam.ac.uk/apps/stats/central-limit-theorem)
-- [One sample test app](http://bioinformatics.cruk.cam.ac.uk/apps/stats/OneSampleTest)
-- [Two sample test app](http://bioinformatics.cruk.cam.ac.uk/apps/stats/TwoSampleTest)
-- [Contingency table app](http://bioinformatics.cruk.cam.ac.uk/apps/stats/contingency-table)
+- [One sample test app](https://markdunning.shinyapps.io/OneSampleTest/)
+- [Two sample test app](https://markdunning.shinyapps.io/TwoSampleTest)
+- [Contingency table app](https://markdunning.shinyapps.io/contingency-table)
 
 ### Further Reading
 
