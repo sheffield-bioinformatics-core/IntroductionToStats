@@ -1,7 +1,7 @@
 ---
 title: "Introduction to Statistical Analysis"
-author: "Mark Dunning. Original materials by CRUK Cambridge Institute Bioinformatics Core; tiny.cc/crukStats"
-date: '`r format(Sys.time(), "Last modified: %d %b %Y")`'
+author: "Mark Dunning and Alison Parton . Original materials by CRUK Cambridge Institute Bioinformatics Core;"
+date: '2018-10-24'
 output: 
   ioslides_presentation: default
   slidy_presentation:
