@@ -281,6 +281,6 @@ Credit: [Effect Size FAQs](http://effectsizefaq.com/2010/05/31/i-always-get-conf
 
 ## Recap
 
-Try this annoymous quiz to see if you understand the materials so far...
+Try this **annoymous** quiz to see if you understand the materials so far...
 
-http://tiny.cc/stats_quiz
+[Click here for quiz...](https://docs.google.com/forms/d/e/1FAIpQLSdjJsxP9u5U0SGXAkTuQSsFecMrtfvf0m0GgWMKDq5bfLEYTA/viewform)
