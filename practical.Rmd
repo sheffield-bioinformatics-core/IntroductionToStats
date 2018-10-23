@@ -336,7 +336,7 @@ Look closely at data distribution, calculated means for each group and the estim
 
 ### 5. Vitamin D levels
 
-The file **`vitd.csv`** contains data on vitamin D levels for subjects with ("Y"), and without ("N") fibrosis. To import these data, you will need to select the ***1st column in a factor*** option. 
+The file **`vitd.csv`** contains data on vitamin D levels for subjects with ("Y"), and without ("N") fibrosis. The researcher would like to know if vitamin D has an effect on the measured quantity. To import these data, you will need to select the ***1st column in a factor*** option. 
 
 ------
 
@@ -394,20 +394,20 @@ cat("Both tests show that there is insufficient evidence to reject the null hypo
 
 # Tests for categorical variables
 
-### 7. Nucleotide frequency 
+### 7. Breast Cancer Incidence
 
-In the following table we have the frequencies of the four nucleotides in two sequences. We are interested in comparing the nucleotide proportions of the two sequences.
+Researchers have collected data on whether women with /without breast cancer had their first child at an age under 25.
 
 <div style='width:50%; margin:auto'>
-&nbsp;     |  A  |  C  |  G  |  T
------------|:---:|:---:|:---:|:---:
-Sequence 1 | 273 | 233 | 236 | 258
-Sequence 2 | 281 | 246 | 244 | 229
+&nbsp;     |  First child at 25 or younger  |  Breast Cancer  |  No Breast Cancer
+-----------|:---:|:---:|:---:|
+Yes | 31 | 1597 |
+No | 65 | 475 | 
 </div>
 
 ------
 
-**Question:** What are your null and alternative hypotheses?
+**Question:** What might your null and alternative hypotheses be?
 
 ------
 
@@ -428,13 +428,13 @@ We can analyse these data online in the Shiny app by entering the counts into th
 
 ------
 ```{r}
-.Table <- matrix(c(273,233,236,258,281,246,244,229), 2, 4, byrow=TRUE)
+.Table <- matrix(c(31,65,1597,4475), 2, 2, byrow=FALSE)
 
 rownames(.Table) <- c('1', '2')
 
-colnames(.Table) <- c('1', '2', '3', '4')
+colnames(.Table) <- c('1', '2')
 
-.Test <- chisq.test(.Table, correct=FALSE)
+.Test <- chisq.test(.Table,correct = TRUE)
 
 .Test
 ```

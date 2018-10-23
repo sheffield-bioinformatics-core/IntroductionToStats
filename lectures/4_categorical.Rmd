@@ -30,10 +30,21 @@ library(gridExtra)
 - Row x Column table (2 x 2 simplest)
 - Categorical data
 - Look for association (relationship) between row variable and column variable
+- N.B. we have already seen an example of this in the *Lady tasting tea* experiment
+
+## Should you wear a bicycle helmet?
+
+- In a study, 372 people wearing a helmet received head injuries compared to 267 that were not
+    + but this does not show the full picture.
+    
+## Should you wear a bicycle helmet?
+
+- It turns out that far more people in the study were wearing helmets
+- Analysis on the data shows that a much higher proportion of the cyclists not wearing a helmet have a higher proportion of head injuries
 
 ```{r}
-df <- data.frame(`Tumour Did Not Shrink` = c(44,24), `Tumour Did Shrink` = c(40,16))
-rownames(df) <- c("Treatment","Placebo")
+df <- data.frame(`Head Injury` = c(372,267), `Other Injury` = c(4715,1391))
+rownames(df) <- c("Wearing Helmet","Not Wearing Helmet")
 df
 ```
 
@@ -42,6 +53,8 @@ df
 - E.g. Research question: A trial to assess the effectiveness of a new treatment versus a placebo in reducing tumour size in patients with ovarian cancer.
 
 ```{r}
+df <- data.frame(`Tumour Did Not Shrink` = c(44,24), `Tumour Did Shrink` = c(40,16))
+rownames(df) <- c("Treatment","Placebo")
 df
 ```
 
@@ -234,3 +247,37 @@ P-value = 0.001
 - Each group of 3/4 people will be assigned a dataset to analyse
 - On this interactive document, describe how you approached the analysis, what test you used and your conclusions
     + https://public.etherpad-mozilla.org/p/2018-10-24-intro-to-stats
+
+## Common pitfalls
+
+<img src="../images/correlation1.png" style="width: 100%; display: block; margin-left: auto; margin-right: auto;"/>
+
+
+## Common pitfalls
+
+***Correlation does not equal causation***
+
+<img src="../images/correlation2.png" style="width: 100%; display: block; margin-left: auto; margin-right: auto;"/>
+
+## Common pitfalls
+
+<img src="../images/headline1.png" style="width: 100%; display: block; margin-left: auto; margin-right: auto;"/>
+
+
+## Common pitfalls
+
+<img src="../images/headline2.png" style="width: 100%; display: block; margin-left: auto; margin-right: auto;"/>
+
+## Common pitfalls
+
+<img src="../images/abstention.png" style="width: 100%; display: block; margin-left: auto; margin-right: auto;"/>
+
+
+## Come speak to us
+
+![](../images/fisher.jpg)
+
+> "To consult the statistician after an experiment is finished is often merely to ask him to conduct a post mortem examination. He [/she] can perhaps say what the experiment died of" - R.A. Fisher
+
+Design consultations available at Sheffield Bioinformatics Core:- bioinformatics-core@sheffield.ac.uk
+
