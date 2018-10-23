@@ -97,7 +97,7 @@ $$\chi^2_1 = \frac{(44-46.06)^2}{46.06} + \frac{(40-37.94)^2}{37.94} + \frac{(24
 
 ## Chi-square test
 
-```{r}
+```{r,fig.width=4,fig.height=3}
 degf <- csq$parameter
 
 xmax <- max(4,csq$statistic)
@@ -113,7 +113,7 @@ pval <- round(csq$p.value,2)
 ```
 
 Test statistic: ${\chi_1}^2$ = `r pval`
-df = `degf`
+df = `r degf`
 P-value = `r pval`
 
 ***Do not reject $H_0$ (No evidence of an association between treatment group and tumour shrinkage)***
@@ -144,11 +144,8 @@ df2
 
 ## Fishers' exact test; results
 
-Observed frequencies:- 
-
 ```{r}
 exp <- round(chisq.test(df)$expected,1)
-
 ```
 
 Expected frequencies:-
@@ -160,8 +157,9 @@ pv <- fisher.test(df)$p.value
 
 - Test statistic: N/A
 - P-value `r pv`
-- Interpretation: ***Do not reject** $H_0$ (No evidence of an association between treatment group and tumour shrinkage)
+- Interpretation: ***Do not reject*** $H_0$ (No evidence of an association between treatment group and tumour shrinkage)
 
+<!--
 ## Chi-square test for trend
 
 - e.g. Research question: Is there a linear association between tumour grade and the incidence of tumour shrinkage
@@ -191,7 +189,7 @@ exp <- round(chisq.test(df)$expected,1)
 exp
 ```
 
-<!--
+
 ## Chi-square test for trend
 
 ```{r}
@@ -284,4 +282,3 @@ P-value = 0.001
 > "To consult the statistician after an experiment is finished is often merely to ask him to conduct a post mortem examination. He [/she] can perhaps say what the experiment died of" - R.A. Fisher
 
 Design consultations available at Sheffield Bioinformatics Core:- bioinformatics-core@sheffield.ac.uk
-

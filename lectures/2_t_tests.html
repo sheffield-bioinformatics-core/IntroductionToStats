@@ -145,7 +145,7 @@
 <li>Mean monthly failure rate \(\ne\) 2.1%</li>
 </ul></li>
 <li><p>Tails: <em>two-tailed</em></p></li>
-<li><p>Either <em>reject</em> or <em>do not reject</em> the null hypothesis - <strong><em>Never accept the alternative hypothesis</em></strong></p></li>
+<li><p>Either <em>reject</em> or <em>do not reject</em> the null hypothesis -</p></li>
 </ul>
 
 </article></slide><slide class=""><hgroup><h2>One sample t-test; the data</h2></hgroup><article  id="one-sample-t-test-the-data">
@@ -164,14 +164,6 @@
 11  November                 3.23
 12  December                 3.40</pre>
 
-</article></slide><slide class=""><hgroup><h2>One sample t-test; the summary statistics</h2></hgroup><article  id="one-sample-t-test-the-summary-statistics">
-
-<p>mean = \((2.9 + \dots + 3.40) / 12\) = 2.841</p>
-
-<p>Standard deviation = 0.837</p>
-
-<p>Hypothesised Mean = 2.1</p>
-
 </article></slide><slide class=""><hgroup><h2>One-sample t-test; key assumptions</h2></hgroup><article  id="one-sample-t-test-key-assumptions">
 
 <ul>
@@ -180,6 +172,14 @@
 </ul>
 
 <p><img src="data:image/png;base64,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" width="384" /></p>
+
+</article></slide><slide class=""><hgroup><h2>One sample t-test; the summary statistics</h2></hgroup><article  id="one-sample-t-test-the-summary-statistics">
+
+<p>mean = \((2.9 + \dots + 3.40) / 12\) = 2.841</p>
+
+<p>Standard deviation = 0.837</p>
+
+<p>Hypothesised Mean = 2.1</p>
 
 </article></slide><slide class=""><hgroup><h2>One-sample t-test; results</h2></hgroup><article  id="one-sample-t-test-results">
 
@@ -204,16 +204,9 @@
 </article></slide><slide class=""><hgroup><h2>One-sample t-test; results</h2></hgroup><article  id="one-sample-t-test-results-3">
 
 <ul>
-<li>The mean monthly failure rate of microarrays in the Genomics core is 2.84</li>
+<li>The mean monthly failure rate of the equipement in the lab is 2.84</li>
 <li>It is not equal to the hypothesized mean proposed by the company of 2.1.</li>
 <li>t=3.07, df=11, p=0.01</li>
-</ul>
-
-</article></slide><slide class=""><hgroup><h2>Demo and Exercise</h2></hgroup><article  id="demo-and-exercise">
-
-<ul>
-<li><p>Demo Using the Shiny app at <a href='http://bioinformatics.cruk.cam.ac.uk/apps/stats/OneSampleTest/' title=''>http://bioinformatics.cruk.cam.ac.uk/apps/stats/OneSampleTest/</a></p></li>
-<li><p>Exercise 1</p></li>
 </ul>
 
 </article></slide><slide class=""><hgroup><h2>Two-sample t-test</h2></hgroup><article  id="two-sample-t-test">
@@ -256,7 +249,7 @@
 <li>mean weight of breed B \(\ne\) mean weight of breed B</li>
 </ul></li>
 <li>Tails: two-tailed</li>
-<li>Either <strong><em>reject</em></strong> or <strong><em>do not reject</em></strong> the null hypothesis - <strong><em>never accept the alternative hypothesis</em></strong></li>
+<li>Either <strong><em>reject</em></strong> or <strong><em>do not reject</em></strong> the null hypothesis -</li>
 </ul>
 
 </article></slide><slide class=""><hgroup><h2>Independent two-sample t-test: the data</h2></hgroup><article  id="independent-two-sample-t-test-the-data">
@@ -311,13 +304,6 @@
 <li>t=-1.21, df= 29.78 (Welch’s correction), p=0.24</li>
 </ul>
 
-</article></slide><slide class=""><hgroup><h2>Demo and Exercise</h2></hgroup><article  id="demo-and-exercise-1">
-
-<ul>
-<li>Demo using the Shiny app at <a href='http://bioinformatics.cruk.cam.ac.uk/apps/stats/TwoSampleTest/' title=''>http://bioinformatics.cruk.cam.ac.uk/apps/stats/TwoSampleTest/</a></li>
-<li>Exercise 2</li>
-</ul>
-
 </article></slide><slide class=""><hgroup><h2>Paired two-sample t-test: Does the mean difference = 0?</h2></hgroup><article  id="paired-two-sample-t-test-does-the-mean-difference-0">
 
 <ul>
@@ -344,7 +330,7 @@
 <li>Cellularity at site A \(\ne\) Cellularity at site B</li>
 </ul></li>
 <li>Tails: two-tailed</li>
-<li>Either <strong><em>reject</em></strong> or <strong><em>do not reject</em></strong> the null hypothesis - <strong><em>never accept the alternative hypothesis</em></strong></li>
+<li>Either <strong><em>reject</em></strong> or <strong><em>do not reject</em></strong> the null hypothesis</li>
 </ul>
 
 </article></slide><slide class=""><hgroup><h2>Paired two-sample t-test; null hypothesis</h2></hgroup><article  id="paired-two-sample-t-test-null-hypothesis">
@@ -389,12 +375,6 @@
 <li>The difference in cellularity between the two sites is 19.14 (95% CI: 8.20, 30.08).</li>
 <li>There is evidence of a difference in cellularity between the two sites.</li>
 <li>t=3.66, df=19, p=0.002.</li>
-</ul>
-
-</article></slide><slide class=""><hgroup><h2>Exercises</h2></hgroup><article  id="exercises">
-
-<ul>
-<li>Complete Exercises 3 and 4</li>
 </ul>
 
 </article></slide><slide class=""><hgroup><h2>Extensions</h2></hgroup><article  id="extensions">

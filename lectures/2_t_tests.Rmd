@@ -48,7 +48,7 @@ library(gridExtra)
     
 - Tails: *two-tailed*
 
-- Either *reject* or *do not reject* the null hypothesis - ***Never accept the alternative hypothesis***
+- Either *reject* or *do not reject* the null hypothesis - 
 
 ## One sample t-test; the data
 
@@ -58,6 +58,17 @@ library(knitr)
 failure <- data.frame(Month = month.name, "Monthly failure rate" = c(2.9,2.99,2.48,1.48,2.71,4.17,3.74,3.04,1.23,2.72,3.23,3.4))
 
 failure
+```
+
+
+
+## One-sample t-test; key assumptions
+
+- Observations are independent
+- Observations are normally distributed
+
+```{r,fig.width=4,fig.height=4}
+hist(failure$Monthly.failure.rate,col="steelblue",xlab="Monthly Failure Rate",main="")
 ```
 
 ## One sample t-test; the summary statistics
@@ -73,15 +84,6 @@ mean = $(2.9 + \dots + 3.40) / 12$ = `r me`
 Standard deviation = `r sd`
 
 Hypothesised Mean = 2.1
-
-## One-sample t-test; key assumptions
-
-- Observations are independent
-- Observations are normally distributed
-
-```{r,fig.width=4,fig.height=4}
-hist(failure$Monthly.failure.rate,col="steelblue",xlab="Monthly Failure Rate",main="")
-```
 
 ## One-sample t-test; results
 
@@ -163,7 +165,7 @@ P = 0.01
 - Alternative hypothesis, $H_1$
     + mean weight of breed B $\ne$ mean weight of breed B
 - Tails: two-tailed 
-- Either ***reject*** or ***do not reject*** the null hypothesis - ***never accept the alternative hypothesis***
+- Either ***reject*** or ***do not reject*** the null hypothesis - 
 
 ## Independent two-sample t-test: the data
 
@@ -239,7 +241,7 @@ P-value: `r round(test$p.value,2)`
 - Alternative hypothesis, $H_1$
     + Cellularity at site A $\ne$ Cellularity at site B
 - Tails: two-tailed
-- Either ***reject*** or ***do not reject*** the null hypothesis - ***never accept the alternative hypothesis***
+- Either ***reject*** or ***do not reject*** the null hypothesis 
 
 ## Paired two-sample t-test; null hypothesis
 
