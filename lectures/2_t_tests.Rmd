@@ -32,25 +32,11 @@ library(gridExtra)
     + ***Paired two-sample t-test***
         + (e.g. $H_0$: mean difference between pairs = 0)
         
-## T-distributions
-
-```{r fig.height=5,fig.width=5}
-ggplot(data.frame(x=c(-4,4)),aes(x,color="red")) + stat_function(fun=dt, args=list(df=1),aes(colour="df=1")) + 
-  stat_function(fun=dt, args=list(df=3),aes(colour="df=3")) +
-  stat_function(fun=dt, args=list(df=8),aes(colour="df=8")) +
-  stat_function(fun=dt, args=list(df=30),aes(colour="df=30")) +
-  stat_function(fun=dnorm, aes(colour="normal")) + 
-  scale_color_manual(name="Distribution", values=c("red","blue","green","yellow","black")) +
-  ggtitle("Comparison of t Distributions")
-  
-```
-
-
 ## One-sample t-test: does mean = X?
 
-- e.g. Question: Published data suggests that the microarray failure rate for a particular supplier is 2.1%
+- e.g. Question: Published data suggests that the failure rate for a particular piece of equipment from a supplier is 2.1%
 
-- **Genomics Core want to know if this holds true in their own lab?**
+- **A research facility want to know if this holds true in their own lab?**
 
 ## One-sample t-test: does mean = X?
 
@@ -112,6 +98,20 @@ rect2 <- data.frame(xmin = critvals[2],xmax = 4, ymin=-Inf,ymax=Inf)
 
 Test statistic: $$t_{n-1} = t_{11} = \frac{\bar{x} - \mu_0} {s.d. / \sqrt{n}} = \frac{2.84 - 2.10}{s.e.(\bar{x})} = $$`r stat`
 
+## T-distributions
+
+```{r fig.height=5,fig.width=5}
+ggplot(data.frame(x=c(-4,4)),aes(x,color="red")) + stat_function(fun=dt, args=list(df=1),aes(colour="df=1")) + 
+  stat_function(fun=dt, args=list(df=3),aes(colour="df=3")) +
+  stat_function(fun=dt, args=list(df=8),aes(colour="df=8")) +
+  stat_function(fun=dt, args=list(df=30),aes(colour="df=30")) +
+  stat_function(fun=dnorm, aes(colour="normal")) + 
+  scale_color_manual(name="Distribution", values=c("red","blue","green","yellow","black")) +
+  ggtitle("Comparison of t Distributions")
+  
+```
+
+
 ## One-sample t-test; results
 
 ```{r,fig.width=4,fig.height=4}
@@ -133,16 +133,9 @@ P = 0.01
 
 ## One-sample t-test; results
 
-- The mean monthly failure rate of microarrays in the Genomics core is 2.84 
+- The mean monthly failure rate of the equipement in the lab is 2.84 
 - It is not equal to the hypothesized mean proposed by the company of 2.1.
 - t=3.07, df=11, p=0.01
-
-## Demo and Exercise
-
-- Demo Using the Shiny app at [http://bioinformatics.cruk.cam.ac.uk/apps/stats/OneSampleTest/](http://bioinformatics.cruk.cam.ac.uk/apps/stats/OneSampleTest/)
-
-- Exercise 1
-
 
 
 ## Two-sample t-test
@@ -230,10 +223,7 @@ P-value: `r round(test$p.value,2)`
 - There is no evidence of a difference in weights between breed A and breed B. 
 - t=`r tsat`, df= `r degfree` (Welch’s correction), p=`r pval`
 
-## Demo and Exercise
 
-- Demo using the Shiny app at [http://bioinformatics.cruk.cam.ac.uk/apps/stats/TwoSampleTest/](http://bioinformatics.cruk.cam.ac.uk/apps/stats/TwoSampleTest/)
-- Exercise 2
 
 ## Paired two-sample t-test: Does the mean difference = 0?
 
@@ -300,10 +290,6 @@ P-value: `r pval`
 - The difference in cellularity between the two sites is 19.14 (95% CI: 8.20, 30.08).
 - There is evidence of a difference in cellularity between the two sites. 
 - t=`r stat`, df=`r degfree`, p=`r pval`.
-
-## Exercises
-
-- Complete Exercises 3 and 4
 
 ## Extensions
 

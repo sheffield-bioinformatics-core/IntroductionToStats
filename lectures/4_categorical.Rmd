@@ -191,6 +191,7 @@ exp <- round(chisq.test(df)$expected,1)
 exp
 ```
 
+<!--
 ## Chi-square test for trend
 
 ```{r}
@@ -209,6 +210,7 @@ P-value = 0.001
 
 ***Reject*** $H_0$ (evidence of a linear association between tumour grade and tumour shrinkage)
 
+-->
 
 ## Summary - Categorical variables
 
@@ -218,7 +220,7 @@ P-value = 0.001
 - Fishers exact test
     + Use when we have two categorical variables, each with two levels, and our expected frequencies are small. 
  
-- Chi-square test for trend
+- (Chi-square test for trend)
     + Use when we have two categorical variables, where one or both are naturally ordered and the ordered variable has at least three levels, and our expected frequencies are not too small. 
 
 - (McNemar’s test)
@@ -269,6 +271,8 @@ P-value = 0.001
 <img src="../images/headline2.png" style="width: 100%; display: block; margin-left: auto; margin-right: auto;"/>
 
 ## Common pitfalls
+
+> David Spiegelhalter, Chair, Winton Centre for Risk and Evidence Communication
 
 <img src="../images/abstention.png" style="width: 100%; display: block; margin-left: auto; margin-right: auto;"/>
 
