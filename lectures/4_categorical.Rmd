@@ -32,9 +32,9 @@ library(gridExtra)
 - Look for association (relationship) between row variable and column variable
 
 ```{r}
-df <- data.frame(Tumour.Did.Not.Shrink = c(44,24), Tumour.Did.Shrink = c(40,16))
+df <- data.frame(`Tumour Did Not Shrink` = c(44,24), `Tumour Did Shrink` = c(40,16))
 rownames(df) <- c("Treatment","Placebo")
-kable(df)
+df
 ```
 
 ## Chi-square test
@@ -42,7 +42,7 @@ kable(df)
 - E.g. Research question: A trial to assess the effectiveness of a new treatment versus a placebo in reducing tumour size in patients with ovarian cancer.
 
 ```{r}
-kable(df)
+df
 ```
 
 - Is there an association between treatment group and tumour shrinkage
@@ -56,7 +56,7 @@ kable(df)
 df2 <- cbind(df, rowSums(df))
 df2 <- rbind(df2, colSums(df))
 colnames(df2)[3] <- rownames(df2)[3] <- "Total"
-kable(df2)
+df2
 ```
 
 $$E = \frac{row total \times col total}{overall total} $$
@@ -71,16 +71,16 @@ $$\frac{84}{124} \times \frac{68}{124} \times 124 = \frac{84\times68}{124} = 46.
 
 ```{r}
 csq <- chisq.test(df,correct = FALSE)
-kable(df)
+df
 ```
 
 ***Expected frequencies:***
 
 ```{r}
-kable(round(csq$expected,1))
+round(csq$expected,1)
 ```
 
-$$\chi^2_1 = \frac{(44-46.06)^2}{46.06} + \frac{(40-37.94)^2}{37.94} + \frac{(24-21.94)^2}{21.94} + \frac{(16-18.06)^2}{18.06} = 0.63$$
+$$\chi^2_1 = \frac{(44-46.06)^2}{46.06} + \frac{(40-37.94)^2}{37.94} + \frac{(24-21.94)^2}{21.94} + \frac{(16-18.06)^2}{18.06}$$
 
 ## Chi-square test
 
@@ -123,7 +123,7 @@ rownames(df) <- c("Treatment","Placebo")
 df2 <- cbind(df, rowSums(df))
 df2 <- rbind(df2, colSums(df))
 colnames(df2)[3] <- rownames(df2)[3] <- "Total"
-kable(df2)
+df2
 ```
 
 - Null hypothesis: $H_0$: No association
@@ -141,7 +141,7 @@ exp <- round(chisq.test(df)$expected,1)
 Expected frequencies:-
 
 ```{r}
-kable(exp)
+exp
 pv <- fisher.test(df)$p.value
 ```
 
@@ -159,7 +159,7 @@ rownames(df) <- c("Grade 1","Grade 2", "Grade 3")
 df2 <- cbind(df, rowSums(df))
 df2 <- rbind(df2, colSums(df))
 colnames(df2)[3] <- rownames(df2)[4] <- "Total"
-kable(df2)
+df2
 ```
 
 - Null hypothesis: $H_0$: No linear association
@@ -168,7 +168,7 @@ kable(df2)
 ## Expected frequencies
 
 ```{r}
-kable(df2)
+df2
 ```
 
 Expected
@@ -229,4 +229,8 @@ P-value = 0.001
 
 ## Small group Exercise
 
-
+- Inside the folder *mystery-data* you will find 8 csv files containing data for analysis
+    + details are given in the practical
+- Each group of 3/4 people will be assigned a dataset to analyse
+- On this interactive document, describe how you approached the analysis, what test you used and your conclusions
+    + https://public.etherpad-mozilla.org/p/2018-10-24-intro-to-stats
