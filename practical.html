@@ -123,7 +123,7 @@ $(document).ready(function () {
 
 <h1 class="title toc-ignore">Introduction to Statistical Analysis</h1>
 <h4 class="author"><em>Mark Dunning, Dominique-Laurent Couturier and Sarah Vowler</em></h4>
-<h4 class="date"><em>Last modified: 23 Oct 2018</em></h4>
+<h4 class="date"><em>Last modified: 24 Oct 2018</em></h4>
 
 </div>
 
@@ -231,7 +231,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <h1>Non-Parametric Tests</h1>
 <div id="vitamin-d-levels" class="section level3">
 <h3>5. Vitamin D levels</h3>
-<p>The file <strong><code>vitd.csv</code></strong> contains data on vitamin D levels for subjects with (“Y”), and without (“N”) fibrosis. To import these data, you will need to select the <strong><em>1st column in a factor</em></strong> option.</p>
+<p>The file <strong><code>vitd.csv</code></strong> contains data on vitamin D levels for subjects with (“Y”), and without (“N”) fibrosis. The researcher would like to know if vitamin D has an effect on the measured quantity. To import these data, you will need to select the <strong><em>1st column in a factor</em></strong> option.</p>
 <hr />
 <p><strong>Question:</strong> State the null and alternative hypothesises</p>
 <hr />
@@ -261,43 +261,37 @@ document.addEventListener("DOMContentLoaded", function() {
 </div>
 <div id="tests-for-categorical-variables" class="section level1">
 <h1>Tests for categorical variables</h1>
-<div id="nucleotide-frequency" class="section level3">
-<h3>7. Nucleotide frequency</h3>
-<p>In the following table we have the frequencies of the four nucleotides in two sequences. We are interested in comparing the nucleotide proportions of the two sequences.</p>
+<div id="breast-cancer-incidence" class="section level3">
+<h3>7. Breast Cancer Incidence</h3>
+<p>Researchers have collected data on whether women with /without breast cancer had their first child at an age under 25.</p>
 <div style="width:50%; margin:auto">
 <table>
 <thead>
 <tr class="header">
-<th> </th>
-<th align="center">A</th>
-<th align="center">C</th>
-<th align="center">G</th>
-<th align="center">T</th>
+<th align="center">First child at 25 or younger</th>
+<th align="center">Breast Cancer</th>
+<th align="center">No Breast Cancer</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Sequence 1</td>
-<td align="center">273</td>
-<td align="center">233</td>
-<td align="center">236</td>
-<td align="center">258</td>
+<td align="center">Yes</td>
+<td align="center">31</td>
+<td align="center">1597</td>
 </tr>
 <tr class="even">
-<td>Sequence 2</td>
-<td align="center">281</td>
-<td align="center">246</td>
-<td align="center">244</td>
-<td align="center">229</td>
+<td align="center">No</td>
+<td align="center">65</td>
+<td align="center">475</td>
 </tr>
 </tbody>
 </table>
 </div>
 <hr />
-<p><strong>Question:</strong> What are your null and alternative hypotheses?</p>
+<p><strong>Question:</strong> What might your null and alternative hypotheses be?</p>
 <hr />
-<p>We can analyse these data online in the Shiny app by entering the counts into the table on the left hand side. Note that the table needs to be resized to increase the number of columns.</p>
-<p><a href="https://markdunning.shinyapps.io/contingency-table" class="uri">https://markdunning.shinyapps.io/contingency-table</a></p>
+<p>We can analyse these data online in the Shiny app by entering the counts into the table on the left hand side. You need to press *<strong>Enter</strong> after entering each value.</p>
+<p><a href="https://markdunning.shinyapps.io/contingencyTable" class="uri">https://markdunning.shinyapps.io/contingencyTable</a></p>
 <hr />
 <p><strong>Question:</strong> What is your value of your Chi-squared statistic and its corresponding p-value? How do you interpret the result?</p>
 <hr />

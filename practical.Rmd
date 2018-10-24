@@ -399,8 +399,8 @@ cat("Both tests show that there is insufficient evidence to reject the null hypo
 Researchers have collected data on whether women with /without breast cancer had their first child at an age under 25.
 
 <div style='width:50%; margin:auto'>
-&nbsp;     |  First child at 25 or younger  |  Breast Cancer  |  No Breast Cancer
------------|:---:|:---:|:---:|
+|  First child at 25 or younger  |  Breast Cancer  |  No Breast Cancer
+|:---:|:---:|:---:|
 Yes | 31 | 1597 |
 No | 65 | 475 | 
 </div>
@@ -418,9 +418,9 @@ Alternative hypothesis. there is an association between sequence number and nucl
 
 ```
 
-We can analyse these data online in the Shiny app by entering the counts into the table on the left hand side. Note that the table needs to be resized to increase the number of columns.
+We can analyse these data online in the Shiny app by entering the counts into the table on the left hand side. You need to press ***Enter** after entering each value.
 
-[https://markdunning.shinyapps.io/contingency-table](https://markdunning.shinyapps.io/contingency-table)
+[https://markdunning.shinyapps.io/contingencyTable](https://markdunning.shinyapps.io/contingencyTable)
 
 ------
 
